@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     credit = await message.reply_text(
-        f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html"
+        "🧲 Leeching for you 🤕",
     )
     i_m_sefg = await message.reply_text("processing...", quote=True)
     # get link from the incoming message
@@ -127,8 +127,7 @@ async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     current_user_id = message.from_user.id
     credit = await message.reply_text(
-        f"💀 Downloading for you <a href='tg://user?id={current_user_id}'>🤕</a>",
-        parse_mode="html",
+        "💀 Downloading for you 🤕",
     )
     i_m_sefg = await message.reply_text("processing...", quote=True)
     # LOGGER.info(message)
